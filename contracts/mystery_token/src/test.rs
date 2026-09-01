@@ -20,8 +20,8 @@ fn setup() -> (Env, MysteryTokenClient<'static>, Address) {
 fn test_initialize_acuna_supply_inicial() {
     let (_env, client, owner) = setup();
 
-    assert_eq!(client.balance(&owner), 1_000_000);
-    assert_eq!(client.total_supply(), 1_000_000);
+    assert_eq!(client.balance(&owner), 2_000_000);
+    assert_eq!(client.total_supply(), 2_000_000);
 }
 
 #[test]
@@ -31,7 +31,7 @@ fn test_transfer_normal_mueve_balances() {
 
     client.transfer(&owner, &bob, &200);
 
-    assert_eq!(client.balance(&owner), 1_000_000 - 200);
+    assert_eq!(client.balance(&owner), 2_000_000 - 200);
     assert_eq!(client.balance(&bob), 200);
 }
 
@@ -58,7 +58,7 @@ fn test_transfer_with_fee_descuenta_el_monto_completo_al_emisor() {
 
     client.transfer_with_fee(&owner, &bob, &1_000);
 
-    assert_eq!(client.balance(&owner), 1_000_000 - 1_000);
+    assert_eq!(client.balance(&owner), 2_000_000 - 1_000);
 }
 
 #[test]
@@ -69,7 +69,7 @@ fn test_transfer_with_fee_quema_la_comision_del_supply() {
     client.transfer_with_fee(&owner, &bob, &1_000);
 
     // el supply total baja en la comision quemada (10)
-    assert_eq!(client.total_supply(), 1_000_000 - 10);
+    assert_eq!(client.total_supply(), 2_000_000 - 10);
 }
 
 #[test]
