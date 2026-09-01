@@ -3,12 +3,12 @@
 Completa este archivo a medida que avanzas en los retos. Terminarlo y
 guardarlo con un commit es el **Commit 4**.
 
-- **Nombre del token:**
-- **Simbolo:**
-- **Tema de la caja:** (ej: Fuego 🔥, Cosmos 🌌...)
-- **CONTRACT_ID:**
+- **Nombre del token:** COYOTEJJ
+- **Simbolo:** COS
+- **Tema de la caja:** Cosmos 🌌
+- **CONTRACT_ID:** CBOIHMQ6QWH47MNX27OT2EAWQO3YRCETON3GJPIAKLOHFXUXM4T7CDK3
 - **Link en Stellar Expert:**
-  `https://stellar.expert/explorer/testnet/contract/<TU_CONTRACT_ID>`
+  `https://stellar.expert/explorer/testnet/contract/CBOIHMQ6QWH47MNX27OT2EAWQO3YRCETON3GJPIAKLOHFXUXM4T7CDK3`
 - **A quien le mande mi caja:**
 - **Quien me mando la mia:**
 
