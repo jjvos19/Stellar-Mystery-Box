@@ -130,16 +130,22 @@ impl MysteryToken {
         }
 
         // 🔍 PISTA 1: calcula la comision, un 1% del monto (amount / 100)
-        // let fee = ???;
+        let fee = amount / 100;
 
         // 🔍 PISTA 2: el monto que realmente llega es amount - fee
-        // let net = ???;
+        let net = amount - fee;
 
         // 🔍 PISTA 3: resta `amount` del balance de `from`
+        let to_balance = read_balance(&env, &to);
+        write_balance(&env, &from, from_balance - amount);
         // 🔍 PISTA 4: suma `net` al balance de `to`
+        write_balance(&env, &to, to_balance + net);
+        
         // 🔍 PISTA 5: "quema" la `fee` reduciendo el supply total (read_supply/write_supply)
+        let supply = read_supply(&env);
+        write_supply(&env, supply-fee);
 
-        panic!("TODO Reto 2: completa esta funcion siguiendo las pistas");
+        //panic!("TODO Reto 2: completa esta funcion siguiendo las pistas");
     }
 }
 
